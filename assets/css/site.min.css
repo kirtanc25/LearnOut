@@ -12548,7 +12548,7 @@ fieldset[disabled] .ui-check input+i:before {
 
 @media (min-width:992px) {
     .page-container {
-        max-width: 1500px;
+        max-width: 1550px;
         margin: 0 20px
     }
     .page-sidenav {
