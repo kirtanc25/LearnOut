@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Add Video</title>
+    <meta name="description" content="Responsive, Bootstrap, BS4">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/site.min.css">
+
+</head>
+
+<body class="layout-row">
+    <!-- left menu start -->
+    <div id="aside" class="page-sidenav no-shrink bg-light nav-dropdown fade" aria-hidden="true">
+        <div class="sidenav h-100 modal-dialog bg-light">
+            <!-- Logo -->
+            <div class="navbar">
+                <div class="navbar-brand">
+                    <img src="../assets/img/logo.png" alt="learn.out">
+                </div>
+            </div>
+
+            <!-- All Menu -->
+            <div class="flex scrollable hover">
+                <div class="nav-border b-primary" data-nav>
+                    <ul class="nav">
+                        <li class="nav-header hidden-folded"><span class="text-muted"></span></li>
+                        <li><a href="faculty.dashboard.html"><span class="nav-icon"><i data-feather="home"></i></span> <span class="nav-text">Dashboard</span></a></li>
+                        <li><a href="faculty.courses.html"><span class="nav-icon text-learn"><i data-feather="book-open"></i></span> <span class="nav-text text-learn">Courses</span></a></li>
+                        <li><a href="faculty.resources.html"><span class="nav-icon"><i data-feather="archive"></i></span> <span class="nav-text">Resources</span></a></li>
+                        <li><a href="faculty.announcements.html"><span class="nav-icon"><i data-feather="message-square"></i></span> <span class="nav-text">Announcements</span></a></li>
+                        <!-- <li><a href="setting.html"><span class="nav-icon"><i data-feather="settings"></i></span> <span class="nav-text">Setting</span></a></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer copyright -->
+            <div class="no-shrink">
+                <div class="p-3 d-flex align-items-center b-t">
+                    <small>© Copyright <b>learn.out</b></small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- left menu ends -->
+
+    <!-- Navbar Starts -->
+    <div id="main" class="layout-column flex">
+        <div id="header" class="page-header">
+            <div class="navbar navbar-expand-lg">
+                <!-- Logo  -->
+                <div class="navbar-brand d-lg-none">
+                    <span class="hidden-folded d-inline l-s-n-1x d-lg-none">
+                        <img src="../assets/img/logo.png" alt="learn.out">
+                    </span>
+                </div>
+
+                <!-- Right side header options -->
+                <ul class="nav navbar-menu order-1 order-lg-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link px-3" data-toggle="dropdown"><i data-feather="settings"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right w mt-4 animate fadeIn">
+                            <div class="setting px-3">
+                                <div class="mb-2 text-muted"><strong>Theme:</strong></div>
+                                <div class="mb-2">
+                                    <label class="radio radio-inline ui-check ui-check-md"><input type="radio" name="bg" value=""> <i></i></label>
+                                    <label class="radio radio-inline ui-check ui-check-color ui-check-md"><input type="radio" name="bg" value="bg-dark"> <i class="bg-dark"></i></label></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link d-flex align-items-center px-2 text-color">
+                            <span class="mx-3 d-none l-h-1x d-lg-block text-right"><small class="text-fade d-block mb-1">Welcome,</small>Username</span>
+                            <span class="avatar w-24" style="margin: -2px"><img src="../assets/img/logo.png" alt="..."></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right w mt-3 animate fadeIn">
+                            <a class="dropdown-item" href="faculty.profile.html"><span>Profile</span></a>
+                            <a class="dropdown-item" href="login.html">Sign out</a></div>
+                    </li>
+                    <li class="nav-item d-lg-none"><a class="nav-link px-1" data-toggle="modal" data-target="#aside"><i data-feather="menu"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Navbar ends -->
+
+
+        <!-- Page content starts -->
+        <div id="content" class="flex">
+            <div class="page-hero page-container" id="page-hero">
+                <div class="padding d-flex">
+                    <div class="page-title">
+                        <h2 class="text-md text-highlight">Add Video</h2>
+                    </div>
+                    <span class="flex"></span>
+                    <div>
+                        <a href="faculty.courses.view.html" class="btn btn-raised btn-wave btn-icon btn-rounded mb-2"><i data-feather="arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content page-container p-l" id="page-content">
+                <div class="card">
+                    <div class="card-header"><strong>Add video topic wise</strong></div>
+                    <div class="card-body">
+                        <form action="#">
+                            <div class="form-row">
+                                <div class="form-group col-sm-12"><label class="text-muted">Topic title</label><input type="text" class="form-control" placeholder="Title" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label class="text-muted">Upload File</label>
+                                    <div class="custom-file"><input type="file" class="custom-file-input"><label class="custom-file-label">Choose file</label></div>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <p class="text-center text-muted p-1 mt-4 h4">OR</p>
+                                </div>
+                                <div class="form-group col-md-5 ">
+                                    <label class="text-muted ">Upload Link</label>
+                                    <input type="url" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group "><label class="text-muted ">Message / Instructions</label><textarea class="form-control " rows="6 " required placeholder="Type your message "></textarea></div>
+                            <div class="pt-2 "><button type="submit " class="btn btn-primary ">Add Video</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page content ends -->
+    </div>
+
+</body>
+
+<!-- Scripts -->
+<script src="../assets/js/site.min.js "></script>
+
+</html>
