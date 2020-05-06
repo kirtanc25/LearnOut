@@ -104,25 +104,27 @@
                 <div class="card">
                     <div class="card-header"><strong>Add video topic wise</strong></div>
                     <div class="card-body">
-                        <form action="#">
+                        <form action="#" name="uploadVideo" onsubmit="validate()">
                             <div class="form-row">
                                 <div class="form-group col-sm-12"><label class="text-muted">Topic title</label><input type="text" class="form-control" placeholder="Title" required></div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-5">
                                     <label class="text-muted">Upload File</label>
-                                    <div class="custom-file"><input type="file" class="custom-file-input"><label class="custom-file-label">Choose file</label></div>
+                                    <div class="custom-file"><input id="file" type="file" class="custom-file-input" accept="video/*" onchange="video()"><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                    <small class="form-text text-muted" id="txt"></small>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <p class="text-center text-muted p-1 mt-4 h4">OR</p>
                                 </div>
                                 <div class="form-group col-md-5 ">
                                     <label class="text-muted ">Upload Link</label>
-                                    <input type="url" class="form-control" required>
+                                    <input id="link" type="url" class="form-control" pattern="https://.*" placeholder="http://www.example.com">
                                 </div>
                             </div>
-                            <div class="form-group "><label class="text-muted ">Message / Instructions</label><textarea class="form-control " rows="6 " required placeholder="Type your message "></textarea></div>
-                            <div class="pt-2 "><button type="submit " class="btn btn-primary ">Add Video</button></div>
+                            <div class="form-group "><label class="text-muted ">Message / Instructions</label><textarea class="form-control " rows="6 " placeholder="Type your message "></textarea></div>
+                            <div class="pt-2 "><button type="submit" class="btn btn-primary">Add Video</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -132,6 +134,29 @@
     </div>
 
 </body>
+<script>
+    var x = document.getElementById('file');
+    var y = document.getElementById('link');
+
+    function video() {
+        var fullpath = document.getElementById("file").value;
+        var backslash = fullpath.lastIndexOf("\\");
+        var filename = fullpath.substr(backslash + 1);
+        var txt = "&nbsp; " + filename + ': selected';
+        document.getElementById("txt").innerHTML = txt;
+    }
+
+    function validate() {
+        if (x.value.length == 0 && y.value.length == 0) {
+            alert("Select file or upload link")
+            return false;
+        } else if (x.value.length != 0 && y.value.length != 0) {
+            alert("Both can't be selected");
+            return false;
+        }
+
+    }
+</script>
 
 <!-- Scripts -->
 <script src="../assets/js/site.min.js "></script>
