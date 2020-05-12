@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Add Course</title>
+    <title>Courses</title>
     <meta name="description" content="Responsive, Bootstrap, BS4">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
@@ -26,12 +26,13 @@
             <!-- All Menu -->
             <div class="flex scrollable hover">
                 <div class="nav-border b-primary" data-nav>
-                    <ul class="nav">
+                    <ul class="nav bg">
                         <li class="nav-header hidden-folded"><span class="text-muted"></span></li>
-                        <li><a href="faculty.dashboard.html"><span class="nav-icon"><i data-feather="home"></i></span> <span class="nav-text">Dashboard</span></a></li>
-                        <li><a href="faculty.courses.html"><span class="nav-icon text-learn"><i data-feather="book-open"></i></span> <span class="nav-text text-learn">Courses</span></a></li>
-                        <li><a href="faculty.resources.html"><span class="nav-icon"><i data-feather="archive"></i></span> <span class="nav-text">Resources</span></a></li>
-                        <li><a href="faculty.announcements.html"><span class="nav-icon"><i data-feather="message-square"></i></span> <span class="nav-text">Announcements</span></a></li>
+                        <li><a href="admin.dashboard.html"><span class="nav-icon"><i data-feather="home"></i></span> <span class="nav-text">Dashboard</span></a></li>
+                        <li class="active"><a href="admin.courses.html"><span class="nav-icon text-learn"><i data-feather="book-open"></i></span> <span class="nav-text text-learn">Courses</span></a></li>
+                        <li><a href="admin.announcements.html"><span class="nav-icon"><i data-feather="message-square"></i></span> <span class="nav-text">Announcements</span></a></li>
+                        <li><a href="admin.results.html"><span class="nav-icon"><i data-feather="award"></i></span> <span class="nav-text">Results</span></a></li>
+                        <li><a href="admin.create_user.html"><span class="nav-icon"><i data-feather="user-plus"></i></span> <span class="nav-text">Create User</span></a></li>
                         <!-- <li><a href="setting.html"><span class="nav-icon"><i data-feather="settings"></i></span> <span class="nav-text">Setting</span></a></li> -->
                     </ul>
                 </div>
@@ -77,7 +78,7 @@
                             <span class="avatar w-24" style="margin: -2px"><img src="../assets/img/logo.png" alt="..."></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right w mt-3 animate fadeIn">
-                            <a class="dropdown-item" href="faculty.profile.html"><span>Profile</span></a>
+                            <a class="dropdown-item" href="admin.profile.html"><span>Profile</span></a>
                             <a class="dropdown-item" href="login.html">Sign out</a></div>
                     </li>
                     <li class="nav-item d-lg-none"><a class="nav-link px-1" data-toggle="modal" data-target="#aside"><i data-feather="menu"></i></a></li>
@@ -92,45 +93,65 @@
             <div class="page-hero page-container" id="page-hero">
                 <div class="padding d-flex">
                     <div class="page-title">
-                        <h2 class="text-md text-highlight">Add Course</h2>
-                    </div>
-                    <span class="flex"></span>
-                    <div>
-                        <a href="faculty.courses.view.html" class="btn btn-raised btn-wave btn-icon btn-rounded mb-2"><i data-feather="arrow-left"></i></a>
+                        <h2 class="text-md text-highlight">All Courses</h2>
                     </div>
                 </div>
             </div>
             <div class="page-content page-container p-l" id="page-content">
-                <div class="card">
-                    <div class="card-body">
-                        <form action="#">
-                            <div class="form-row">
-                                <div class="form-group col-md-2">
-                                    <label class="text-muted">Dept.</label>
-                                    <select class="custom-select" required>
-                                            <option selected="selected">Select</option>
-                                            <option>CE</option>
-                                            <option>EC</option>
-                                            <option>ME</option>
-                                        </select>
-                                </div>
-                                <div class="form-group col-md-2"><label class="text-muted">Course Code</label><input type="text" pattern="\d*" class="form-control" maxlength="3" placeholder="Code (E.g. 251)" required></div>
-                                <div class="form-group col-md-4"><label class="text-muted">Course title</label><input type="text" class="form-control" placeholder="Title" required></div>
-                                <div class="form-group col-md-4">
-                                    <label class="text-muted">Another Faculty (if any)</label>
-                                    <select class="custom-select">
-                                            <option selected="selected">Select</option>
-                                            <option>Prof. X</option>
-                                            <option>Prof. Y</option>
-                                            <option>Prof. Z</option>
-                                        </select>
-                                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CE-245 | Course Name</h5>
+                                <p class="card-text">Dr. Ritesh Patel</p>
                             </div>
-                            <div class="pt-2">
-                                <button type="submit" class="btn btn-primary">Add Course</button>
-                                <button type="reset" class="btn btn-outline-warning">Reset</button>
+                            <div class="card-body text-right"><a href="admin.courses.view.html" class="btn w-sm mb-1 btn-outline-primary">Enter</a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CE-245 | Course Name</h5>
+                                <p class="card-text">Dr. Ritesh Patel</p>
                             </div>
-                        </form>
+                            <div class="card-body text-right"><a href="admin.courses.view.html" class="btn w-sm mb-1 btn-outline-primary">Enter</a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CE-245 | Course Name</h5>
+                                <p class="card-text">Dr. Ritesh Patel</p>
+                            </div>
+                            <div class="card-body text-right"><a href="admin.courses.view.html" class="btn w-sm mb-1 btn-outline-primary">Enter</a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CE-245 | Course Name</h5>
+                                <p class="card-text">Dr. Ritesh Patel</p>
+                            </div>
+                            <div class="card-body text-right"><a href="admin.courses.view.html" class="btn w-sm mb-1 btn-outline-primary">Enter</a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CE-245 | Course Name</h5>
+                                <p class="card-text">Dr. Ritesh Patel</p>
+                            </div>
+                            <div class="card-body text-right"><a href="admin.courses.view.html" class="btn w-sm mb-1 btn-outline-primary">Enter</a> </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CE-245 | Course Name</h5>
+                                <p class="card-text">Dr. Ritesh Patel</p>
+                            </div>
+                            <div class="card-body text-right"><a href="admin.courses.view.html" class="btn w-sm mb-1 btn-outline-primary">Enter</a> </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,28 +160,8 @@
     </div>
 
 </body>
+
 <!-- Scripts -->
-<script>
-    var x = document.getElementById('file');
-    var disp = document.getElementById('txt');
-
-    function handleFileSelect() {
-        if (!x.files) return;
-
-        disp.innerHTML = x.files.length + " files selected: <br/> <hr>";
-
-        var files = x.files;
-        for (var i = 0; i < files.length; i++) {
-            var f = files[i];
-            disp.innerHTML += f.name + "<br/>";
-        }
-        disp.innerHTML += "<hr>";
-    }
-
-    function reset_txt() {
-        disp.innerHTML = "";
-    }
-</script>
 <script src="../assets/js/site.min.js"></script>
 
 </html>

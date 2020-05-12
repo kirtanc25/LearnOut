@@ -125,6 +125,7 @@
                             <div class="form-group "><label class="text-muted ">Message / Instructions</label><textarea class="form-control " rows="6 " placeholder="Type your message "></textarea></div>
                             <div class="pt-2 ">
                                 <button type="submit" class="btn btn-primary">Add Video</button>
+                                <button type="reset" class="btn btn-outline-warning">Reset</button>
                             </div>
                         </form>
                     </div>
@@ -140,13 +141,14 @@
 <script>
     var x = document.getElementById('file');
     var y = document.getElementById('link');
+    var disp = document.getElementById('txt');
 
     function video() {
         var fullpath = document.getElementById("file").value;
         var backslash = fullpath.lastIndexOf("\\");
         var filename = fullpath.substr(backslash + 1);
         var txt = "&nbsp; " + filename + ': selected';
-        document.getElementById("txt").innerHTML = txt;
+        disp.innerHTML = txt;
     }
 
     function validate() {
@@ -157,7 +159,11 @@
             alert("Both can't be selected");
             return false;
         }
+    }
 
+
+    function reset_txt() {
+        disp.innerHTML = "";
     }
 </script>
 <script src="../assets/js/site.min.js "></script>

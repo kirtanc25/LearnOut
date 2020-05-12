@@ -138,6 +138,7 @@
                             </div>
                             <div class="pt-2">
                                 <button type="submit" class="btn btn-primary">Assign Task</button>
+                                <button type="reset" class="btn btn-outline-warning">Reset</button>
                             </div>
                         </form>
                     </div>
@@ -150,9 +151,10 @@
 </body>
 <!-- Scripts -->
 <script>
+    var x = document.getElementById('file');
+    var disp = document.getElementById('txt');
+
     function handleFileSelect() {
-        var x = document.getElementById('file');
-        var disp = document.getElementById('txt');
         if (!x.files) return;
 
         disp.innerHTML = x.files.length + " files selected: <br/> <hr>";
@@ -163,7 +165,10 @@
             disp.innerHTML += f.name + "<br/>";
         }
         disp.innerHTML += "<hr>";
+    }
 
+    function reset_txt() {
+        disp.innerHTML = "";
     }
 </script>
 <script src="../assets/js/site.min.js"></script>
