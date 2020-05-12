@@ -103,7 +103,35 @@
                 </div>
             </div>
             <div class="page-content page-container p-l" id="page-content">
-                <div class="">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label class="text-muted">Type</label>
+                        <select class="custom-select" onchange="ChangeDropdowns(this.value);">
+                            <option selected="selected" value="">Select</option>
+                            <option value="single">Single</option>
+                            <option value="multiple">Multiple</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="multiple" style="display: none;">
+                    <form action="#">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label class="text-muted">Upload File</label>
+                                <div class="custom-file"><input id="file_csv" type="file" class="custom-file-input" accept=".xlsx, .xls, .csv" onchange="file_up()" required><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                <small class="form-text text-muted" id="txt"></small>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <button type="submit" class="btn btn-primary col-md-3 m-t-10 m-b-10">Create</button>
+                                <button type="button" class="btn btn-outline-danger col-md-3 m-t-10 m-b-10">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="single" style="display: none;">
                     <form action="#">
                         <div class="form-row">
                             <div class="form-group col-md-12">
@@ -213,8 +241,27 @@
     </div>
 
 </body>
-
 <!-- Scripts -->
+<script type="text/javascript">
+    function ChangeDropdowns(value) {
+        if (value == "single") {
+            document.getElementById('single').style.display = 'block';
+            document.getElementById('multiple').style.display = 'none';
+        } else if (value == "multiple") {
+            document.getElementById('multiple').style.display = 'block';
+            document.getElementById('single').style.display = 'none';
+        }
+    }
+
+    function file_up() {
+        var fullpath = document.getElementById("file_csv").value;
+        var backslash = fullpath.lastIndexOf("\\");
+        var filename = fullpath.substr(backslash + 1);
+        var txt = "&nbsp; " + filename + ' : selected';
+        document.getElementById("txt").innerHTML = txt;
+    }
+</script>
+
 <script src="../assets/js/site.min.js"></script>
 
 </html>
