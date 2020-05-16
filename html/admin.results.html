@@ -98,15 +98,227 @@
                 </div>
             </div>
             <div class="page-content page-container p-l" id="page-content">
-
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Computer Engineering</h5>
+                                <form action="#" method="POST">
+                                    <div class="form-group">
+                                        <label class="text-muted">Select Semester</label>
+                                        <select class="custom-select" required>
+                                            <option selected="selected" value="">Select</option>
+                                            <option value="s1">Sem 1</option>
+                                            <option value="s2">Sem 2</option>
+                                            <option value="s3">Sem 3</option>
+                                            <option value="s4">Sem 4</option>
+                                            <option value="s5">Sem 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-muted">Upload File</label>
+                                        <div class="custom-file"><input id="ce_file_csv" type="file" class="custom-file-input" accept=".xlsx, .xls, .csv" onchange="ce_file_up()" required><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                        <small class="form-text text-muted" id="ce_txt"></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-outline-primary col-4">Submit</button>
+                                        <button type="reset" class="btn btn-outline-warning col-4" onclick="ce_reset_txt()">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Civil Engineering</h5>
+                                <form action="#" method="POST">
+                                    <div class="form-group">
+                                        <label class="text-muted">Select Semester</label>
+                                        <select class="custom-select" required>
+                                            <option selected="selected" value="">Select</option>
+                                            <option value="s1">Sem 1</option>
+                                            <option value="s2">Sem 2</option>
+                                            <option value="s3">Sem 3</option>
+                                            <option value="s4">Sem 4</option>
+                                            <option value="s5">Sem 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-muted">Upload File</label>
+                                        <div class="custom-file"><input id="c_file_csv" type="file" class="custom-file-input" accept=".xlsx, .xls, .csv" onchange="c_file_up()" required><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                        <small class="form-text text-muted" id="c_txt"></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-outline-primary col-4">Submit</button>
+                                        <button type="reset" class="btn btn-outline-warning col-4" onclick="c_reset_txt()">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Mechanical Engineering</h5>
+                                <form action="#" method="POST">
+                                    <div class="form-group">
+                                        <label class="text-muted">Select Semester</label>
+                                        <select class="custom-select" required>
+                                            <option selected="selected" value="">Select</option>
+                                            <option value="s1">Sem 1</option>
+                                            <option value="s2">Sem 2</option>
+                                            <option value="s3">Sem 3</option>
+                                            <option value="s4">Sem 4</option>
+                                            <option value="s5">Sem 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-muted">Upload File</label>
+                                        <div class="custom-file"><input id="me_file_csv" type="file" class="custom-file-input" accept=".xlsx, .xls, .csv" onchange="me_file_up()" required><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                        <small class="form-text text-muted" id="me_txt"></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-outline-primary col-4">Submit</button>
+                                        <button type="reset" class="btn btn-outline-warning col-4" onclick="me_reset_txt()">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Information Tecnology</h5>
+                                <form action="#" method="POST">
+                                    <div class="form-group">
+                                        <label class="text-muted">Select Semester</label>
+                                        <select class="custom-select" required>
+                                            <option selected="selected" value="">Select</option>
+                                            <option value="s1">Sem 1</option>
+                                            <option value="s2">Sem 2</option>
+                                            <option value="s3">Sem 3</option>
+                                            <option value="s4">Sem 4</option>
+                                            <option value="s5">Sem 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-muted">Upload File</label>
+                                        <div class="custom-file"><input id="it_file_csv" type="file" class="custom-file-input" accept=".xlsx, .xls, .csv" onchange="it_file_up()" required><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                        <small class="form-text text-muted" id="it_txt"></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-outline-primary col-4">Submit</button>
+                                        <button type="reset" class="btn btn-outline-warning col-4" onclick="it_reset_txt()">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Electrical Engineering</h5>
+                                <form action="#" method="POST">
+                                    <div class="form-group">
+                                        <label class="text-muted">Select Semester</label>
+                                        <select class="custom-select" required>
+                                            <option selected="selected" value="">Select</option>
+                                            <option value="s1">Sem 1</option>
+                                            <option value="s2">Sem 2</option>
+                                            <option value="s3">Sem 3</option>
+                                            <option value="s4">Sem 4</option>
+                                            <option value="s5">Sem 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-muted">Upload File</label>
+                                        <div class="custom-file"><input id="ec_file_csv" type="file" class="custom-file-input" accept=".xlsx, .xls, .csv" onchange="ec_file_up()" required><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                        <small class="form-text text-muted" id="ec_txt"></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-outline-primary col-4">Submit</button>
+                                        <button type="reset" class="btn btn-outline-warning col-4" onclick="ec_reset_txt()">Reset</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Page content ends -->
     </div>
 
 </body>
-
 <!-- Scripts -->
+<script type="text/javascript">
+    var ce = document.getElementById('ce_txt');
+    var c = document.getElementById('c_txt');
+    var me = document.getElementById('me_txt');
+    var ec = document.getElementById('ec_txt');
+    var it = document.getElementById('it_txt');
+
+    function ce_file_up() {
+        var fullpath = document.getElementById("ce_file_csv").value;
+        var backslash = fullpath.lastIndexOf("\\");
+        var filename = fullpath.substr(backslash + 1);
+        var txt = "&nbsp; " + filename + ' : selected';
+        ce.innerHTML = txt;
+    }
+
+    function c_file_up() {
+        var fullpath = document.getElementById("c_file_csv").value;
+        var backslash = fullpath.lastIndexOf("\\");
+        var filename = fullpath.substr(backslash + 1);
+        var txt = "&nbsp; " + filename + ' : selected';
+        c.innerHTML = txt;
+    }
+
+    function me_file_up() {
+        var fullpath = document.getElementById("me_file_csv").value;
+        var backslash = fullpath.lastIndexOf("\\");
+        var filename = fullpath.substr(backslash + 1);
+        var txt = "&nbsp; " + filename + ' : selected';
+        me.innerHTML = txt;
+    }
+
+    function ec_file_up() {
+        var fullpath = document.getElementById("ec_file_csv").value;
+        var backslash = fullpath.lastIndexOf("\\");
+        var filename = fullpath.substr(backslash + 1);
+        var txt = "&nbsp; " + filename + ' : selected';
+        ec.innerHTML = txt;
+    }
+
+    function it_file_up() {
+        var fullpath = document.getElementById("it_file_csv").value;
+        var backslash = fullpath.lastIndexOf("\\");
+        var filename = fullpath.substr(backslash + 1);
+        var txt = "&nbsp; " + filename + ' : selected';
+        it.innerHTML = txt;
+    }
+
+    function ce_reset_txt() {
+        ce.innerHTML = "";
+    }
+
+    function c_reset_txt() {
+        c.innerHTML = "";
+    }
+
+    function me_reset_txt() {
+        me.innerHTML = "";
+    }
+
+    function ec_reset_txt() {
+        ec.innerHTML = "";
+    }
+
+    function it_reset_txt() {
+        it.innerHTML = "";
+    }
+</script>
 <script src="../assets/js/site.min.js"></script>
 
 </html>
