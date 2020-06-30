@@ -120,14 +120,17 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label class="text-muted">Due Date</label>
-                                    <input type="date" class="form-control" required>
+                                    <label class="text-muted">Due Date & Time</label>
+                                    <input type="datetime-local" class="form-control" required>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label class="text-muted">Due Time</label>
-                                    <input type="time" class="form-control" required>
+                                    <label class="text-muted">URL</label>
+                                    <input type="url" class="form-control" placeholder="www.example.com" required>
                                 </div>
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-1">
+                                    <p class="text-center text-muted p-1 mt-4 h4">OR</p>
+                                </div>
+                                <div class="form-group col-md-3">
                                     <label class="text-muted">Attachments (If any)</label>
                                     <div class="custom-file"><input id="file" type="file" class="custom-file-input" accept=".pdf,image/*" onchange="handleFileSelect()" multiple><label class="custom-file-label" id="lab_file">Choose file</label></div>
                                 </div>
@@ -138,7 +141,7 @@
                             </div>
                             <div class="pt-2">
                                 <button type="submit" class="btn btn-outline-primary col-1">Assign Task</button>
-                                <button type="reset" class="btn btn-outline-warning col-1">Reset</button>
+                                <button type="reset" onclick="reset_txt()" class="btn btn-outline-warning col-1">Reset</button>
                             </div>
                         </form>
                     </div>
