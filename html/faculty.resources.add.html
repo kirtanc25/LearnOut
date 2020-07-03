@@ -105,10 +105,19 @@
                     <div class="card-body">
                         <form action="#" method="POST">
                             <div class="form-row">
-                                <div class="form-group col-sm-4"><label class="text-muted">Name of Resource</label><input type="text" class="form-control" placeholder="Title" required></div>
+                                <div class="form-group col-md-4"><label class="text-muted">Name of Resource</label><input type="text" class="form-control" placeholder="Title" required></div>
+                                <div class="form-group col-md-4">
+                                    <label class="text-muted">Course (if any)</label>
+                                    <select class="custom-select">
+                                        <option selected="selected">Select</option>
+                                        <option>General</option>
+                                        <option>Course 1</option>
+                                        <option>Course 2</option>
+                                    </select>
+                                </div>
                                 <div class="form-group col-md-4">
                                     <label class="text-muted">Attachments</label>
-                                    <div class="custom-file"><input id="file" type="file" class="custom-file-input" accept=".pdf,image/*" onchange="handleFileSelect()"><label class="custom-file-label" id="lab_file">Choose file</label></div>
+                                    <div class="custom-file"><input id="file" type="file" class="custom-file-input" onchange="handleFileSelect()" required><label class="custom-file-label" id="lab_file">Choose file</label></div>
                                 </div>
                             </div>
                             <div class="form-row">
