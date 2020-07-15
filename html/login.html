@@ -9,6 +9,15 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../assets/css/site.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="layout-row">
@@ -23,12 +32,17 @@
                         <h5>Welcome back</h5>
                         <p><small class="text-muted">Login to manage your account</small></p>
                         <form action="#" method="POST">
-                            <div class="form-group"><label>Username</label><input type="text" class="form-control" placeholder="Enter Username"></div>
-                            <div class="form-group"><label>Password</label><input type="password" class="form-control" placeholder="Enter Password">
-                                <div class="my-3 text-right"><a href="forgot-password.html" class="text-muted">Forgot password?</a></div>
+                            <div class="form-group"><label>Username</label><input type="text" class="form-control"
+                                    placeholder="Enter Username"></div>
+                            <div class="form-group"><label>Password</label><input type="password" class="form-control"
+                                    placeholder="Enter Password">
+                                <div class="my-3 text-right"><a href="forgot-password.html" class="text-muted">Forgot
+                                        password?</a></div>
                             </div>
-                            <button type="submit" class="btn btn-block btn-outline-primary mb-4">Log in</button>
+                            <button type="submit" class="btn btn-block btn-outline-primary mb-4 save">Log in</button>
                         </form>
+                        <div class="alert alert-danger hidden" id="msg"><i data-feather="info"></i> <span
+                                class="mx-2">Incorrect Password</span></div>
                     </div>
                 </div>
             </div>
@@ -39,5 +53,12 @@
 
 <!-- Scripts -->
 <script src="../assets/js/site.min.js"></script>
+<script>
+    $(".save").click(function () {
+        $('#msg').removeClass('hidden');
+        $('#msg').addClass('show').delay(3000).fadeOut(5000);
+
+    });
+</script>
 
 </html>
