@@ -1,5 +1,6 @@
 # LearnOut
 ‘Learn.out’ is a website, which is developed to simplify the task of faculty as well as the student. The website contains three roles: Admin, Faculty & Student. The role of the admin is to create the user (i.e. faculty and students), upload results of students, and handle all the issues/queries faced by either of the users. The role of faculty is to upload video lectures that are best suited for a particular topic, assign tasks to the students (like submission/assignments), upload necessary resources for reference (like books, ppts, theory questions, examples along with university papers) and add important announcements. Finally, the role of a student is to watch video lectures, submit task, etc.
+
 ---
 # Summary: 
 The aim of this project is to develop a web application that will contain two part, one is Learning and other is Submission. Learning module consists of notes, books, ppts, theory questions, examples along with university papers. Faculty assigns assignment to the students whose submission need to be done in Submission module. 
